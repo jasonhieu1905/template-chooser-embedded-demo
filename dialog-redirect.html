@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Opening Template Chooser</title>
+    </head>
+    <body>
+        <script>
+            const sourceUrl = new URL(location.href);
+            const target = sourceUrl.searchParams.get('target');
+
+            try {
+                const targetUrl = new URL(target);
+                if (targetUrl.protocol !== 'https:') {
+                    throw new Error('Template Chooser must use HTTPS.');
+                }
+
+                sourceUrl.searchParams.forEach((value, key) => {
+                    if (key !== 'target' && !targetUrl.searchParams.has(key)) {
+                        targetUrl.searchParams.set(key, value);
+                    }
+                });
+
+                location.replace(targetUrl.toString());
+            } catch (error) {
+                document.body.textContent =
+                    error instanceof Error
+                        ? error.message
+                        : 'Invalid Template Chooser URL.';
+            }
+        </script>
+    </body>
+</html>

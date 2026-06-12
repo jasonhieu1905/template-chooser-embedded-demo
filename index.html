@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Template Chooser Outlook Demo</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+        <script src="app.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <h1>Template Chooser</h1>
+
+            <label>
+                Template Chooser URL
+                <input
+                    id="templateChooserUrl"
+                    type="url"
+                    value="https://template-chooser-embedded.officeatwork.com/"
+                />
+            </label>
+
+            <label>
+                Custom XML part
+                <textarea id="customXml" rows="16"></textarea>
+            </label>
+
+            <label>
+                Document properties
+                <textarea id="documentProperties" rows="14"></textarea>
+            </label>
+
+            <button id="openTemplateChooser" type="button" disabled>
+                Open Template Chooser
+            </button>
+
+            <section>
+                <h2>Result</h2>
+                <a id="documentLink" hidden></a>
+                <pre id="result">Initializing Office.js</pre>
+            </section>
+        </main>
+    </body>
+</html>

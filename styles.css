@@ -1,0 +1,98 @@
+:root {
+    color: #242424;
+    background: #ffffff;
+    font-family: "Segoe UI", sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+h1,
+h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+label {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+button {
+    box-sizing: border-box;
+    width: 100%;
+    font: inherit;
+}
+
+input,
+textarea {
+    border: 1px solid #8a8886;
+    padding: 8px;
+}
+
+textarea,
+pre {
+    max-width: 100%;
+    overflow: auto;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12px;
+}
+
+button {
+    min-height: 36px;
+    border: 0;
+    padding: 8px 12px;
+    color: #ffffff;
+    background: #0f6cbd;
+    cursor: pointer;
+}
+
+button:disabled {
+    color: #707070;
+    background: #e0e0e0;
+    cursor: default;
+}
+
+section {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+pre {
+    min-height: 56px;
+    margin: 0;
+    border: 1px solid #d1d1d1;
+    padding: 8px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
